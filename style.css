@@ -1,133 +1,267 @@
-/* Minimal academic style (inspired by simple math homepages). */
-/* Keep everything readable, fast, and easy to maintain. */
+/* For computer screens */
+@media only screen and (min-width: 900px){
+    body {
+	margin: 0 auto;
+    }
 
-:root{
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #4b5563;
-  --link: #0645ad;         /* classic academic link blue */
-  --rule: rgba(17,24,39,.15);
-  --maxw: 860px;
+    /* Increase font size on larger screens. */
+    h1 {
+	font-size: 28pt;
+    }
+
+    textarea {
+	width: 400px;
+    }
+    
+    /* Header image styling for 10Bsp18 page. */
+    .intro54sp21 img {
+	width: 26%;
+	float: left;
+	margin-right: 4%;
+    }
+
+    /* Header image styling for 285sp22 page. */
+    .intro285sp22 img {
+	width: 54%;
+	float: right;
+	margin-left: 2%;
+    }
+    
+    /* Header image styling for 10Bsp18 page. */
+    .intro10Bsp18 img {
+	float: left;
+	margin-right: 4%;
+    }
+
+    /* Header image styling for 54su17 page. */
+    .intro54su17 img {
+	float: left;
+	margin-right: 4%;
+    }
+
+    /* Header image styling for main page */
+    .intro img {
+	max-width: 21%;
+	margin-top: -5px;
+	/* max-width: 19%; */
+    }
+
+    .intro {
+	margin-bottom: 10px;
+    }
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #0b1020;
-    --text:#e8edf6;
-    --muted:#b6c2d6;
-    --link:#86a7ff;
-    --rule: rgba(231,236,246,.18);
-  }
+/* For phones and tablets */
+@media only screen and (max-width: 900px) {
+    /* Decrease font size on smaller screens. */
+    h1 {
+	font-size: 25pt;
+    }
+
+    textarea {
+	width: 95%;
+	max-width: 400px;
+    }
+
+    /* Header image styling for 54su17 page. */
+    .intro54sp21 img {
+	width: 100%;
+	max-width: 300px;
+    }
+
+    /* Header image styling for 285sp22 page. */
+    .intro285sp22 img {
+	width: 100%;
+    }
+    
+    /* Header image styling for main page. */
+    .intro img {
+	width: 42%;
+	max-width: 175px;
+	margin-top: -5px;
+    }
+
+    .intro {
+	margin-bottom: 10px;
+    }
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-  font-size: 17px;
-  line-height: 1.6;
+/* Don't take up all the space on large screens. */
+body {
+    max-width: 875px;
+    margin-bottom: 50px;
 }
 
-main{
-  max-width: var(--maxw);
-  margin: 36px auto 56px;
-  padding: 0 20px;
+h1, h2, h3, p, li, table {
+    font-family: palatino, verdana, tahoma, geneva, sans-serif;
 }
 
-a{color: var(--link); text-decoration:none}
-a:hover{text-decoration:underline}
-
-.skip-link{
-  position:absolute;
-  left:-999px; top:auto;
-  width:1px;height:1px; overflow:hidden;
-}
-.skip-link:focus{
-  left:20px; top:16px;
-  width:auto;height:auto;
-  padding:8px 10px;
-  background: var(--bg);
-  border: 1px solid var(--rule);
+h1 {
+    margin-top: 5pt;
+    padding-bottom: 0px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid black;
 }
 
-header{
-  margin-bottom: 22px;
+h2 {
+    font-variant: small-caps;
+    font-size: 14pt;
+    margin-bottom: 0pt;
+    margin-top: 20pt;
+    border-bottom: 1px solid gray;
 }
 
-h1{
-  margin: 0 0 6px;
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+p, li {
+    font-size: 14pt;
 }
 
-.subhead{
-  color: var(--muted);
-  margin: 0 0 10px;
+table {
+    font-size: 12pt;
 }
 
-nav{
-  margin-top: 10px;
-  margin-bottom: 8px;
-}
-nav a{
-  margin-right: 12px;
-  white-space: nowrap;
-}
-nav a:last-child{margin-right:0}
-
-hr{
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 18px 0 0;
+ul li {
+    padding: 3px 0px;
 }
 
-h2{
-  margin: 26px 0 8px;
-  font-size: 1.28rem;
-  font-weight: 700;
+textarea {
+    height: 60px;
+    border: 1px solid #000;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 12pt;
+    font-family: verdana;
 }
 
-h3{
-  margin: 16px 0 6px;
-  font-size: 1.06rem;
-  font-weight: 700;
+textarea:focus {
+    box-shadow: 0 0 5px #9ecaed;
+    border: 1px solid darkblue;
 }
 
-p{margin: 10px 0}
-ul{margin: 8px 0 0; padding-left: 1.2rem}
-li{margin: 7px 0}
-
-.small{color: var(--muted); font-size: .95rem}
-.kv{margin-top: 8px}
-.kv div{margin: 3px 0}
-
-.profile{
-  float: right;
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 4px 0 10px 18px;
+a:hover {
+    cursor: pointer;
+    border-bottom: 1px gray dotted;
 }
 
-@media (max-width: 740px){
-  .profile{
-    float:none;
-    display:block;
-    width: 160px;
-    height: 160px;
-    margin: 10px 0 12px;
-  }
+a:visited {
+    color: darkblue;
 }
 
-.footer{
-  margin-top: 34px;
-  padding-top: 10px;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: .95rem;
+a:hover {
+    color: #af0000;
 }
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+details {
+    background-color: #d9edff;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+}
+
+details summary { 
+  cursor: pointer; /*Change cursor to pointer when hovering over details element.*/
+}
+
+details summary > * {
+    display: inline;
+}
+
+/* Homepage header image styling */
+.intro img {
+    float: left;
+    /*max-width: 23%;/*21%;*/
+    margin-right: 3%;
+    /* border-radius: 10%; */
+    border-radius: 30%;
+}
+
+/* Qual transcript header image styling */
+.qual_intro img {
+    max-width: 100%;
+    margin-top: 2%;
+}
+
+/* Homepage research list image styling. */
+.research img {
+    float: right;
+    max-width: 40%;
+    margin-left: 5%;
+    border-radius: 5%;
+}
+
+/* 54sp21 header styling. Prevents image from escaping header. */
+.intro54sp21 {
+    padding-bottom: 1px;
+}
+
+/* 10Bsp18 header styling. Prevents image from escaping header. */
+.intro10Bsp18 {
+    padding-bottom: 1px;
+}
+
+.intro54su17 {
+    padding-bottom: 1px;
+}
+
+.schedule54su17 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.schedule54su17 table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+.schedule54su17 td, .schedule54su17 th {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.schedule54su17 tr.header {
+    border-bottom: 2px solid black;
+    background-color: #FFFF66;
+}
+
+.schedule54su17 tbody tr:nth-child(10n+2), .schedule54su17 tbody tr:nth-child(10n+1), .schedule54su17 tbody tr:nth-child(10n+3), .schedule54su17 tbody tr:nth-child(10n+4), .schedule54su17 tbody tr:nth-child(10n+5) {
+    background-color: lightblue;
+}
+
+.schedule54su17 tbody tr:nth-child(10n+6), .schedule54su17 tbody tr:nth-child(10n+7), .schedule54su17 tbody tr:nth-child(10n+8), .schedule54su17 tbody tr:nth-child(10n+9), .schedule54su17 tbody tr:nth-child(10n) {
+    background-color: lightgreen;
+}
+
+.schedule54su17 tbody tr:nth-child(12), .schedule54su17 tbody tr:nth-child(21), .schedule54su17 tbody tr:nth-child(40) {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.schedule54su17 tbody tr:nth-child(12) td:nth-child(1), .schedule54su17 tbody tr:nth-child(12) td:nth-child(4), .schedule54su17 tbody tr:nth-child(12) td:nth-child(5), .schedule54su17 tbody tr:nth-child(12) td:nth-child(6), .schedule54su17 tbody tr:nth-child(12) td:nth-child(7) {
+    background-color: blue;
+}
+
+table {
+    border: 2px solid black;
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+tr.header {
+    border-bottom: 2px solid black;
+}
+
+
