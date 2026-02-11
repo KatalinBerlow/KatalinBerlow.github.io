@@ -1,303 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Katalin Berlow | Math PhD Candidate at UC Berkeley</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #222;
-    }
-    h1, h2, h3 {
-      margin-top: 2rem;
-      line-height: 1.2;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-   img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Katalin Berlow | Mathematics</title>
+  <meta name="description" content="Katalin Berlow — PhD candidate in Mathematics at UC Berkeley. Descriptive combinatorics, measured group theory, ergodic theory." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
 
-/* Remove shadow from specific images */
-.research-image,
-.email-image {
-  box-shadow: none;
-}
-    section {
-      border-top: 1px solid #ddd;
-      padding-top: 2rem;
-      margin-top: 2rem;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    nav li {
-      display: inline;
-    }
+  <!-- Social cards -->
+  <meta property="og:title" content="Katalin Berlow | Mathematics" />
+  <meta property="og:description" content="Descriptive combinatorics, measured group theory, and applications to ergodic theory and geometric group theory." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: set og:image to a hosted image (e.g., assets/me.jpg) after you add it -->
 
-    /* Intro section layout */
-    .intro-flex {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .profile-photo {
-      max-width: 250px;
-      height: auto;
-      flex-shrink: 0;
-    }
-    .intro-text {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    @media (max-width: 600px) {
-      .intro-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-      .intro-text {
-        text-align: center;
-      }
-    }
-
-    .research-flex {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.research-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.research-image {
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-  </style>
+  <script>
+    // theme toggle: respects system theme unless user sets a preference
+    (function(){
+      const saved = localStorage.getItem("theme");
+      if(saved === "light") document.documentElement.classList.add("theme-light");
+      if(saved === "dark") document.documentElement.classList.add("theme-dark");
+    })();
+  </script>
 </head>
 
 <body>
-  <header>
-    <h1>Katalin Berlow</h1>
-    <div class="intro">
-      <div class="intro-flex">
-        <img src="Me.jpg" alt="Portrait of Katalin Berlow" class="profile-photo">
-        <div class="intro-text">
-          <p>I am a PhD candidate in my fifth year at UC Berkeley, advised by 
-            <a href="https://math.berkeley.edu/~marks/">Andrew Marks</a> and 
-            <a href="https://people.clas.ufl.edu/r-tuckerdrob/">Robin Tucker-Drob</a>. 
-            My research focuses on applied descriptive set theory, especially descriptive combinatorics, 
-            measured group theory, and their applications to ergodic theory and geometric group theory.</p>
-          <p>I am grateful to be supported by an NSF Graduate Research Fellowship and a Simons Dissertation Fellowship.</p>
-           <p>I am currently on the academic job market. Here is my <a href="CV.pdf">CV</a>.</p>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-          <p><strong>Office:</strong> 1057 Evans Hall<br>
-            <strong>Email:</strong> [first name] at berkeley dot edu </p>
-          <p><strong>BS:</strong> Mathematics, Carnegie Mellon University (2017–2021)<br>
-            <strong>PhD:</strong> Mathematics, UC Berkeley (2021–2026)</p>
-<p>
-        <a href="Riddles.pdf"><strong>Riddle list</strong></a></p>
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="name">Katalin Berlow</div>
+          <div class="tag">Mathematics • UC Berkeley</div>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#research">Research</a>
+          <a href="#papers">Papers</a>
+          <a href="#talks">Talks</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#outreach">Outreach</a>
+          <a href="#misc">Misc</a>
+        </nav>
+
+        <div class="actions">
+          <button class="btn" id="themeBtn" type="button" aria-label="Toggle theme">Theme</button>
+          <a class="btn primary" href="CV.pdf">CV (PDF)</a>
         </div>
       </div>
     </div>
-  </header>
-
-<nav>
-  <ul>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#talks">Talks</a></li>
-    <li><a href="#expository">Expository</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#misc">Misc</a></li>
-  </ul>
-</nav>
-
-
-  <section id="research">
-  <h2>Research</h2>
-  <div class="research-flex">
-    <div class="research-text">
-
-    <h3 id="papers-preparation">Papers in Preparation</h3>
-    <ul>
-		<li><strong>A Measurable Analog of Euler's Formula in Pmp Graphs </strong><br>
-        [In preparation, 2025+]</li>
-
-      <li><strong>Separating Complexity Classes of LCL Problems on Grids, Part 2</strong><br>
-        with <a href="https://bahtoh-math.github.io">Anton Bernshteyn</a>, Clark Lyons, 
-        <a href="https://www.math.cmu.edu/~fweilach/">Felix Weilacher</a><br>
-        [In preparation, 2025+]</li>
-
-      <li><strong>Equivalence Relations Acting on Bundles of Trees</strong><br>
-        with <a href="https://rynchn.github.io/math/">Ronnie Chen</a>, 
-        <a href="https://people.clas.ufl.edu/r-tuckerdrob/">Robin Tucker-Drob</a>, 
-        <a href="https://www.math.mcgill.ca/atserunyan/">Anush Tserunyan</a><br>
-        [In preparation, 2025+]</li>
-    </ul>
-
-    <h3 id="papers-grad">Papers (Graduate School)</h3>
-    <ul>
-      <li><strong>Separating Complexity Classes of LCL Problems on Grids</strong><br>
-        with <a href="https://bahtoh-math.github.io">Anton Bernshteyn</a>, Clark Lyons, 
-        <a href="https://www.math.cmu.edu/~fweilach/">Felix Weilacher</a><br>
-        [<a href="https://arxiv.org/pdf/2501.17445">arXiv</a>] 
-        [<a href="SEALS_FINAL.pdf">Slides</a>]</li>
-
-<li><strong>Borel Polychromatic Number of Grids</strong><br>
-        with <a href="https://pma.caltech.edu/people/edward-hou">Edward Hou</a><br>
-        [<a href="https://arxiv.org/abs/2508.18559">arXiv</a>]</li>   
-     </ul>
-
-    <h3 id="papers-undergrad">Papers (Undergraduate)</h3>
-    <ul>
-      <li><strong>Intersection Bodies of Polytopes</strong><br>
-        with <a href="https://mariebrandenburg.github.io">Marie Brandenburg</a>, 
-        <a href="https://merochia.wixsite.com/chiara-meroni">Chiara Meroni</a>, 
-        <a href="https://sites.google.com/view/isabelle-shankar">Isabelle Shankar</a><br>
-        [<a href="https://arxiv.org/abs/2110.05996">arXiv</a>] 
-        [<a href="https://link.springer.com/article/10.1007/s10801-024-01328-9">Journal</a>]</li>
-
-      <li><strong>Restricted Stacks as Functions</strong><br>
-        [<a href="https://arxiv.org/abs/2008.01164">arXiv</a>] 
-        [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0012365X21002843?via%3Dihub">Journal</a>] 
-        [<a href="StackSlides.pdf">Slides</a>]</li>
-
-      <li><strong>Almost Abelian Lie Groups, Subgroups, and Quotients</strong><br>
-        with <a href="https://justequations.org/our-people/marcelo-almora-rios">Marcelo Almora Rios</a>, 
-        <a href="https://www.z-avetisyan.com">Zhirayr Avetisyan</a>, 
-        <a href="https://web.ma.utexas.edu/users/ikmartin/">Isaac Martin</a>, et al.<br>
-        [<a href="https://arxiv.org/abs/2004.04369">arXiv</a>] 
-        [<a href="https://link.springer.com/article/10.1007/s10958-022-05872-2">Journal</a>]</li>
-    </ul>
- </div>
-    <img src="Toast.jpg" alt="Whimsical toast image used in research section" class="research-image">
   </div>
-</section>
-<section id="talks">
-  <h2>Talks</h2>
 
-  <h3>Upcoming invited talks</h3>
-  <ul>
-    <li> 
-      <strong> LCLs on Grids </strong> <br>
-      Drafting Workshop in Discrete Mathematics, Number Theory and Probability, Budapest, Jan 2026.
-    <li>
-      <strong>Borel combinatorics on grids</strong><br>
-      AMS Spring Western Sectional Meeting, Boise, Idaho, Mar 7–8, 2026.
-    </li>
-        <li>
-      <strong>Title TBD</strong><br>
-      Caltech Logic Seminar (Zoom), Apr 15, 2026.
-    </li>
-  </ul>
+  <main id="content" class="container">
+    <section class="hero" aria-label="Intro">
+      <div class="hero-grid">
+        <div class="card pad-lg">
+          <h1>Descriptive combinatorics & measurable group theory</h1>
+          <p class="lede">
+            I am a fifth-year PhD candidate in Mathematics at UC Berkeley, advised by
+            <a href="https://math.berkeley.edu/~marks/">Andrew Marks</a> and
+            <a href="https://people.clas.ufl.edu/r-tuckerdrob/">Robin Tucker-Drob</a>.
+            My work studies how <em>combinatorial structure</em> encodes <em>dynamical</em> and <em>group-theoretic</em> information,
+            with a focus on descriptive combinatorics, measured group theory, and applications to ergodic theory and geometric group theory.
+          </p>
 
-  <h3>Past Invited talks</h3>
-  <ul>
-    <li>
-      <strong>A Measurable Analog to Euler’s Formula in Pmp Graphs</strong><br>
-      North American Descriptive Set Theory, University of Maryland, Oct 2025.
-    </li>
-    <li>
-      <strong>Separating Complexity Classes of LCLs on Grids</strong><br>
-      CanaDAM, Ottawa, May 2025.
-      <!-- Optional: add slides if you want: [<a href="SEALS_FINAL.pdf">Slides</a>] -->
-    </li>
-    <li>
-      <strong>Separating Complexity Classes of LCLs on Grids</strong><br>
-      South Eastern Logic Symposium (SEALS), University of Florida, Mar 2025.
-      <!-- Optional: add slides if you want: [<a href="SEALS_FINAL.pdf">Slides</a>] -->
-    </li>
-  </ul>
-</section>
+          <div class="pills" aria-label="Topics">
+            <div class="pill">Descriptive combinatorics</div>
+            <div class="pill">Borel / measurable graphs</div>
+            <div class="pill">Measured group theory</div>
+            <div class="pill">Local algorithms on grids</div>
+            <div class="pill">Equidecompositions</div>
+          </div>
 
-  <section id="expository">
-    <h2>Expository</h2>
-    <p>Here are some expository documents I have written:</p>
-    <ul>
-      <li><strong>Amenable Groups Acting on Trees</strong><br>
-        [<a href="Amenable.pdf">Notes</a>]</li>
-    </ul>
-  </section>
+          <p style="margin-top:16px; color:var(--muted);">
+            I am supported by an NSF Graduate Research Fellowship and a Simons Dissertation Fellowship.
+          </p>
 
-  <section id="teaching">
-    <h2>Instructor at Berkeley</h2>
-    <p>I have been main instructor for the following courses. </p>
-    <ul>
-      <li><strong>Math 110: Abstract Linear Algebra</strong><br>
-        [<a href="https://math.berkeley.edu/~katalin/110.html">Course Website</a>]</li>
-    </ul>
-    <h2>TA at Berkeley</h2>
-    <p>I have been a TA for the following courses. </p>
-    <ul>
-      <li><strong>Math 1B: Calculus</strong></li>
-      <li><strong>Math 54: Linear Algebra and Differential Equations</strong></li>
-      <li><strong>Math 74: Transition to Upper Division Mathematics</strong></li>
-    </ul>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+            <a class="btn primary" href="#papers">Selected papers</a>
+            <a class="btn" href="https://arxiv.org/search/?searchtype=author&query=Berlow%2C+K">arXiv</a>
+            <a class="btn" href="#talks">Talks</a>
+          </div>
 
-    <h2>TA at Carnegie Mellon</h2>
-    <p>I have been an undergraduate TA for the following courses. </p>
-    <ul>
-      <li><strong>21-127: Concepts of Mathematics</strong></li>
-      <li><strong>33-142: Physics II for Engineers</strong></li>
-    </ul>
-  </section>
+          <small style="display:block; margin-top:12px;">
+            Tip: replace the text above with a 2–3 sentence “pitch” that matches the positions you’re targeting.
+          </small>
+        </div>
 
+        <aside class="card pad" aria-label="Contact">
+          <div class="quick">
+            <!-- Add your headshot at assets/me.jpg (or update this path). -->
+            <img class="photo" src="assets/me.jpg" alt="Portrait headshot" />
+            <div>
+              <h2>Contact</h2>
+              <div class="meta">katalin [at] berkeley [dot] edu</div>
+              <div class="meta">Office: 1057 Evans Hall</div>
+            </div>
+          </div>
 
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I grew up in Fresno, California. Here is how I spend my time other than math:
-    I like playing board games (especially the game Hex), and I also play Netrunner and Magic: The Gathering.
-    I listen to classical music and play clarinet, and I also listen to Midwest emo
-    (<a href="https://open.spotify.com/playlist/75dnR8Pe35t6vS4RKIdjTu?si=f9W8-nCiQRGftxlQD3_V7g" target="_blank" rel="noopener noreferrer">Spotify playlist</a>).
-    I enjoy audiobooks, and I like composing orchestral arrangements of pop songs. I boulder and do Latin dance.
-  </p>
-</section>
+          <div class="kv" role="list">
+            <div class="k" role="listitem">Affiliation</div>
+            <div class="v">UC Berkeley (2021–2026 expected)</div>
 
+            <div class="k" role="listitem">Advisors</div>
+            <div class="v">
+              <a href="https://math.berkeley.edu/~marks/">Andrew Marks</a><span class="inline-sep">•</span>
+              <a href="https://people.clas.ufl.edu/r-tuckerdrob/">Robin Tucker-Drob</a>
+            </div>
 
+            <div class="k" role="listitem">Links</div>
+            <div class="v">
+              <a href="CV.pdf">CV</a><span class="inline-sep">•</span>
+              <a href="https://scholar.google.com/">Scholar</a><span class="inline-sep">•</span>
+              <a href="https://github.com/">GitHub</a>
+            </div>
 
-  <section id="misc">
-    <h2>Miscellaneous</h2>
-    <p>Here are some other things I have made:</p>
-    <ul>
-      <li><strong>Riddles</strong><br>
-        [<a href="Riddles.pdf">Link</a>]</li>
-      <li><strong>Paintings</strong><br>
-        [<a href="Art.html">Link</a>]</li>
-    </ul>
-	<p>Rectangular toast generator made by an undergrad I mentored:  <a href="https://atticuscull.github.io/" target="_blank" rel="noopener noreferrer">
-    Atticus Cull
-  </a>.</p>
-    <p>My Erd&#337;s number: 3</p>
-  </section>
+            <div class="k" role="listitem">Keywords</div>
+            <div class="v">Borel graphs, graphings, LCLs, amenability</div>
+          </div>
+
+          <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px;">
+            <a class="btn" href="Riddles.pdf">Riddles</a>
+            <a class="btn" href="#outreach">Mentoring</a>
+          </div>
+
+          <small style="display:block; margin-top:12px;">
+            Replace “Scholar/GitHub” with your actual links.
+          </small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Research</h2>
+      <p class="subtitle">
+        Current directions and long-term themes.
+      </p>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="project">
+          <h3>A measurable Euler-type invariant for pmp graphs</h3>
+          <div class="byline">Measurable analogs of Euler’s formula; applications to coloring and planar graphings.</div>
+          <div class="badges">
+            <span class="badge prep">In preparation</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Local computation on grids (LCL complexity)</h3>
+          <div class="byline">Separating classes of locally checkable labeling problems for group actions on grids.</div>
+          <div class="badges">
+            <span class="badge prep">In preparation</span>
+            <span class="badge sub">Submitted (Part 1)</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Polychromatic colorings for \u2114<sup>d</sup>-actions</h3>
+          <div class="byline">Borel polychromatic number and sharp bounds for \u2114<sup>d</sup> grid actions.</div>
+          <div class="badges">
+            <span class="badge sub">Submitted</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Equivalence relations on bundles of trees</h3>
+          <div class="byline">Structure/dichotomy phenomena for equivalence relations acting on tree bundles.</div>
+          <div class="badges">
+            <span class="badge prep">In preparation</span>
+          </div>
+        </div>
+      </div>
+
+      <details style="margin-top:16px;">
+        <summary>One-paragraph research overview (template)</summary>
+        <div class="details-hint">
+          Many visitors are not specialists. A good default is: (i) what objects you study,
+          (ii) what your main results look like, (iii) what they unlock or connect to.
+        </div>
+      </details>
+    </section>
+
+    <section class="section" id="papers">
+      <h2>Papers</h2>
+      <p class="subtitle">Preprints, submitted work, and publications. “Selected” at the top.</p>
+
+      <div class="pubgrid" style="margin-top:14px;">
+        <article class="pub" aria-label="Selected paper">
+          <div class="title">Separating Complexity Classes of LCL Problems on Grids</div>
+          <div class="authors">with Anton Bernshteyn, Clark Lyons, Felix Weilacher</div>
+          <div class="venue">Submitted (2025+)</div>
+          <div class="links">
+            <a class="linkchip" href="https://arxiv.org/pdf/2501.17445">PDF (arXiv)</a>
+            <a class="linkchip" href="SEALS_FINAL.pdf">Slides</a>
+          </div>
+        </article>
+
+        <article class="pub" aria-label="Selected paper">
+          <div class="title">The Polychromatic Number of Grids</div>
+          <div class="authors">with Edward Hou</div>
+          <div class="venue">Submitted (2025) • arXiv:2508.18559</div>
+          <div class="links">
+            <a class="linkchip" href="https://arxiv.org/abs/2508.18559">arXiv</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top:14px;">
+        <details>
+          <summary>In preparation</summary>
+          <ul class="list compact">
+            <li><strong>A measurable analog to Euler’s formula in pmp graphs</strong> (2025+)</li>
+            <li><strong>Equivalence relations acting on bundles of trees</strong> (2025+) — with R. Chen, A. Tserunyan, R. Tucker-Drob</li>
+            <li><strong>Separating complexity classes of LCL problems on grids, Part 2</strong> (2025+) — with A. Bernshteyn, C. Lyons, F. Weilacher</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:12px;">
+          <summary>Published</summary>
+          <ul class="list compact">
+            <li>
+              <strong>Intersection Bodies of Polytopes</strong> — <em>Beitr&auml;ge zur Algebra und Geometrie</em> 63 (2022), 419–439.
+              <span class="inline-sep">•</span><a href="https://arxiv.org/abs/2110.05996">arXiv</a>
+              <span class="inline-sep">•</span><a href="https://link.springer.com/article/10.1007/s13366-022-00621-7">Journal</a>
+            </li>
+            <li>
+              <strong>Analysis on Almost Abelian Lie Groups</strong> — <em>Journal of Mathematical Sciences</em> (2022).
+              <span class="inline-sep">•</span><a href="https://arxiv.org/abs/2004.04369">arXiv</a>
+            </li>
+            <li>
+              <strong>Restricted Stacks as Functions</strong> — <em>Discrete Mathematics</em> 334 (2021).
+              <span class="inline-sep">•</span><a href="https://arxiv.org/abs/2008.01164">arXiv</a>
+            </li>
+          </ul>
+        </details>
+      </div>
+
+      <small style="display:block; margin-top:12px;">
+        Tip: keep each entry to 2–4 lines; add a one-sentence “what the main theorem says” if you want more impact.
+      </small>
+    </section>
+
+    <section class="section" id="talks">
+      <h2>Talks</h2>
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Upcoming invited</h3>
+          <ul class="list compact">
+            <li><strong>LCLs on grids</strong> — Drafting Workshop in Discrete Mathematics, Number Theory and Probability (Budapest), Jan 2026</li>
+            <li><strong>Borel combinatorics on grids</strong> — AMS Spring Western Sectional Meeting (Boise), Mar 7–8, 2026</li>
+            <li><strong>Title TBD</strong> — Caltech Logic Seminar (Zoom), Apr 15, 2026</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Selected past</h3>
+          <ul class="list compact">
+            <li><strong>A measurable analog to Euler’s formula in pmp graphs</strong> — North American Descriptive Set Theory (Maryland), Oct 2025</li>
+            <li><strong>Separating complexity classes of LCLs on grids</strong> — CanaDAM (Ottawa), May 2025</li>
+            <li><strong>Separating complexity classes of LCLs on grids</strong> — SEALS (Florida), Mar 2025</li>
+            <li><strong>Borel polychromatic number of graphs induced by \u2124<sup>d</sup> actions</strong> — Berkeley Student Logic Colloquium, Dec 2023</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <h2>Teaching</h2>
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Main instructor</h3>
+          <ul class="list compact">
+            <li><strong>MATH 110: Abstract Linear Algebra</strong> (UC Berkeley, Summer 2025) — <a href="https://math.berkeley.edu/~katalin/110.html">course site</a></li>
+          </ul>
+          <h3 style="margin:14px 0 6px;">GSI / Teaching assistant</h3>
+          <ul class="list compact">
+            <li>MATH 113: Abstract Algebra (UC Berkeley, Fall 2025)</li>
+            <li>MATH 1B: Calculus II (UC Berkeley, Spring 2023)</li>
+            <li>MATH 54: Linear Algebra &amp; Differential Equations (UC Berkeley, Fall 2022)</li>
+            <li>MUSA 74: Transition to Upper-Division Mathematics (UC Berkeley, Fall 2021)</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">At Carnegie Mellon</h3>
+          <ul class="list compact">
+            <li>21-127: Concepts of Mathematics (Spring 2020)</li>
+            <li>33-142: Physics II for Engineers (Summer 2018)</li>
+          </ul>
+          <details style="margin-top:12px;">
+            <summary>Teaching materials (suggested)</summary>
+            <div class="details-hint">
+              Add 1–2 representative items: a worksheet, a problem set, or a short note about what you emphasize in instruction.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outreach">
+      <h2>Organizing &amp; outreach</h2>
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Mentorship</h3>
+          <ul class="list compact">
+            <li>Visiting research mentor, Duluth REU in Combinatorics (2021–2024)</li>
+            <li>Mentor, UC Berkeley Directed Reading Program (2021–2025)</li>
+          </ul>
+          <p style="color:var(--muted); margin-top:10px;">
+            Topics: extremal/probabilistic combinatorics, descriptive set theory, equidecompositions, amenable groups.
+          </p>
+        </div>
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Service</h3>
+          <ul class="list compact">
+            <li>Organized: Distributed Algorithms &amp; Borel Combinatorics Seminar (Berkeley, Fall 2023)</li>
+            <li>Organized: Descriptive Set Theory Seminar (Berkeley, Spring 2022)</li>
+            <li>Organized: Topics in Mathematics (Virtual), 2021</li>
+            <li>Reviewer: <em>Discrete Mathematics</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="misc">
+      <h2>Misc</h2>
+      <div class="grid-2" style="margin-top:14px;">
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Expository</h3>
+          <ul class="list compact">
+            <li><strong>Amenable groups acting on trees</strong> — <a href="Amenable.pdf">notes</a></li>
+          </ul>
+          <h3 style="margin:14px 0 6px;">Other</h3>
+          <ul class="list compact">
+            <li><a href="Art.html">Paintings</a></li>
+            <li><a href="Riddles.pdf">Riddles</a></li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h3 style="margin:0 0 6px;">Quick facts</h3>
+          <ul class="list compact">
+            <li>Erd\u0151s number: 3</li>
+            <li>Languages: English (native), Hungarian (learning)</li>
+          </ul>
+          <p style="color:var(--muted); margin-top:10px;">
+            Rectangular toast generator by an undergrad I mentored:
+            <a href="https://atticuscull.github.io/" target="_blank" rel="noopener noreferrer">Atticus Cull</a>.
+          </p>
+
+          <a class="btn" href="#content" style="margin-top:10px;">Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" aria-label="Footer">
+      <div>© <span id="year"></span> Katalin Berlow</div>
+      <div>Built as a static site (works on GitHub Pages)</div>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const btn = document.getElementById("themeBtn");
+      btn.addEventListener("click", () => {
+        const root = document.documentElement;
+        const isLight = root.classList.contains("theme-light");
+        const isDark = root.classList.contains("theme-dark");
+
+        // Cycle: system -> light -> dark -> system ...
+        if(!isLight && !isDark){
+          root.classList.add("theme-light");
+          localStorage.setItem("theme","light");
+          return;
+        }
+        if(isLight){
+          root.classList.remove("theme-light");
+          root.classList.add("theme-dark");
+          localStorage.setItem("theme","dark");
+          return;
+        }
+        // isDark
+        root.classList.remove("theme-dark");
+        localStorage.removeItem("theme");
+      });
+    })();
+  </script>
 </body>
 </html>
