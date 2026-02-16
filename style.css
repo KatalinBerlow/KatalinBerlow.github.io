@@ -137,11 +137,6 @@ textarea:focus {
     border: 1px solid darkblue;
 }
 
-a:hover {
-    cursor: pointer;
-    border-bottom: 1px gray dotted;
-}
-
 a {
   color: #800020;     /* maroon */
   text-decoration: none;
