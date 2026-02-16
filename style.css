@@ -142,17 +142,19 @@ a:hover {
     border-bottom: 1px gray dotted;
 }
 
+a {
+  color: #800020;     /* maroon */
+  text-decoration: none;
+}
+
 a:visited {
-    color: darkblue;
+  color: #800020;     /* same maroon for visited */
 }
 
 a:hover {
-    color: #af0000;
-}
-
-a {
-    color: darkblue;
-    text-decoration: none;
+  color: #af0000;     /* your hover red (or adjust) */
+  cursor: pointer;
+  border-bottom: 1px gray dotted;
 }
 
 details {
